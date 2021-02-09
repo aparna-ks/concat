@@ -1,4 +1,5 @@
-# concat csv files in a directory to be analyzed
-Concatenating 1000s of csv files was a challenge in one of my projects and using Python without Pandas was faster. 
-Though the fastest solution was sed 1d *.csv > output.csv
+# concat csv files in a directory
+In one of my projects, the input files were generated every few minutes and end of the day these files were concatentaed to be analyzed. Initially I used Pandas but using Python files was faster. 
+
+Another good solution was sed 1d *.csv > output.csv
 
