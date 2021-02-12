@@ -28,7 +28,7 @@ def concat_csv(all_csv_files):
 
 
 if __name__ == '__main__':
-    path = ../data
+    path = '../data'
     extension = 'csv'
     os.chdir(path)
 
