@@ -41,7 +41,7 @@ def csv_to_pq_s3(s3, csv_files):
     return True
 
 
-def csv_topq_local(csv_files):
+def csv_to_pq_local(csv_files):
     for csv in csv_files:
         df = pd.read_csv(csv)
         filename = csv.split(".csv")[0]
