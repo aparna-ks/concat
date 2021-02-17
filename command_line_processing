@@ -25,6 +25,15 @@ awk -F, 'NR>1{a[$3]+=1;}END{for(i in a)print i", "a[i];}' data.csv
 #Without header
 sort -t"," -k3,3 data.csv | cut -d, -f3 | uniq -c
 
+#Count no of times a particular value occurs in column
+awk -F, '$1=="x"{x+=1;}END{print x}' data.csv
+
+#Find sum of a column for a given value
+awk -F, '$1=="x"{x+=$4;}END{print x}' data.csv
+
+#Convert column to lower case
+awk -F, '{$3=tolower($3)}1' OFS=, data.csv
+
 #Sort csv files without header
 #-t"delimiter"
 #-k<columns to sort>
