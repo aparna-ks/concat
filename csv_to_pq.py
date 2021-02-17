@@ -10,7 +10,7 @@ from botocore.exceptions import ClientError
 
 
 # Returns csv files to be converted to pq format
-def read_csv(s3):
+def read_csv(s3,bucket):
     response = s3.list_objects(Bucket=bucket)
     contents = response['Contents']
     keys = []
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     # Data is split with states as prefixes and yyyy_mm as name
     # E.g ca-2019-12 contains airline data for CA for Dec 2019
 
-    csv_files = read_csv(s3)
+    csv_files = read_csv(s3,bucket)
 
     if csv_files:
         csv_to_pq_s3(s3, csv_files)
