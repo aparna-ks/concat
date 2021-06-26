@@ -28,7 +28,7 @@ def concat_csv(all_csv_files):
 
 
 if __name__ == '__main__':
-    path = "/Users/bluefish/Documents/Projects/csv/test"
+    path = "Projects/csv/test"
     extension = 'csv'
     os.chdir(path)
 
